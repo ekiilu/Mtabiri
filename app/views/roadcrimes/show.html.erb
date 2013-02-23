@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nationalid:</b>
+  <%= @roadcrime.nationalid %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @roadcrime.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_roadcrime_path(@roadcrime) %> |
+<%= link_to 'Back', roadcrimes_path %>

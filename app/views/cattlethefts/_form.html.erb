@@ -1,0 +1,29 @@
+<%= form_for(@cattletheft) do |f| %>
+  <% if @cattletheft.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cattletheft.errors.count, "error") %> prohibited this cattletheft from being saved:</h2>
+
+      <ul>
+      <% @cattletheft.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numberstolen %><br />
+    <%= f.number_field :numberstolen %>
+  </div>
+  <div class="field">
+    <%= f.label :date_reported %><br />
+    <%= f.date_select :date_reported %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

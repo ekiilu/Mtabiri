@@ -1,0 +1,26 @@
+<h1>Showing Cattle Thefts</h1>
+
+<table class="table_list">
+  <tr>
+    <th>Numberstolen</th>
+    <th>Date reported</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cattlethefts.each do |cattletheft| %>
+  <tr>
+    <td><%= cattletheft.numberstolen %></td>
+    <td><%= cattletheft.date_reported %></td>
+    <td><%= cattletheft.location %></td>
+    <td><%= link_to 'Show', cattletheft %></td>
+    <td><%= link_to 'Edit', edit_cattletheft_path(cattletheft) %></td>
+    <td><%= link_to 'Destroy', cattletheft, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

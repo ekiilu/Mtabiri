@@ -1,0 +1,2 @@
+module LocationreportsHelper
+end

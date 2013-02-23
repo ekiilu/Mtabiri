@@ -1,0 +1,11 @@
+<div class="report_dlg">
+<%= form_tag "/hivlocationreports/" , :method => "get" do %>
+<%= collection_select(:location,:id,@locations,:id,:name,options ={:prompt => "Select a Location"}) %>
+
+
+  <%= submit_tag "Predict" %>
+<% end %>
+
+</div>
+
+<%= image_tag("predictor_location_report.png",:alt => "Predictor Location Report") %>

@@ -1,0 +1,32 @@
+<h1>Mtabiri Registered Members</h1>
+
+<table class="table_list">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+    <th>Location</th>
+    <th>Nationalid</th>
+    <th>Gender</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.firstname %></td>
+    <td><%= member.lastname %></td>
+    <td><%= member.age %></td>
+    <td><%= member.location %></td>
+    <td><%= member.nationalid %></td>
+    <td><%= member.gender %></td>
+    <td><%= link_to 'Show', member %></td>
+    <td><%= link_to 'Edit', edit_member_path(member) %></td>
+    <td><%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

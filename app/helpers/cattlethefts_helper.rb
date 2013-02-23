@@ -1,0 +1,2 @@
+module CattletheftsHelper
+end
